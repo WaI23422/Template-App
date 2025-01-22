@@ -1,0 +1,20 @@
+<ng-container *ngIf="isVisible">
+    <ng-container [ngTemplateOutlet]="isMobileScreen ? mobileSidebar : deskSidebar"></ng-container>
+</ng-container>
+
+
+<ng-template #deskSidebar>
+    <div @swipeLeftRight class="sidebar-container min-w-max max-h-max w-sidebar-fixed h-fixed fixed shadow-2"
+        #scrollContainer>
+        <div class="logo-container"></div>
+
+        <app-menu [menuItems]="menuItems"></app-menu>
+    </div>
+</ng-template>
+
+
+<ng-template #mobileSidebar>
+    <p-sidebar [(visible)]="isVisible" [showCloseIcon]="false" (visibleChange)="isVisibleChange.emit($event)">
+        <app-menu [menuItems]="menuItems"></app-menu>
+    </p-sidebar>
+</ng-template>

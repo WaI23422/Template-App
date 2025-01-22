@@ -1,0 +1,17 @@
+<app-header
+    [logoImageUrl] = "logoUrl"
+    [logoTitle] = "title"
+    (toggleVisibility)="toggleSideBarVisibility()"
+></app-header>
+
+<div class = "body-container grid">
+    <app-sidebar-nav [(isVisible)] = "sidebarVisible"
+        (mouseenter) = "sidebar.showScrollbar()"
+        (mouseleave) = "sidebar.hideScrollbar()"
+    >
+    </app-sidebar-nav>
+
+    <div class="home-content w-full h-fixed m-3" [class.m-page-fixed] = "sidebarVisible && !isMobileScreen">
+        <router-outlet></router-outlet>
+    </div>
+</div>

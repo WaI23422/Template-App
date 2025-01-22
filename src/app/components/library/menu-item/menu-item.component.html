@@ -1,0 +1,22 @@
+<li class="navigation-block">
+    <ng-container [ngTemplateOutlet]="hasSubMenu ? submenu : item"></ng-container>
+</li>
+
+<ng-template #submenu>
+    <div class="navigation nav-item block flex" [ngClass]="subMenuStatus ? 'head-submenu' : 'head-close-submenu'" (click)="triggerMenuItem()">
+        <i class="{{ navigationItem.icon }} pr-2"></i><span>{{ navigationItem.label }}</span>
+    </div>
+
+    <ul class="subMenu" [@submenuAnimation]="subMenuStatus ? 'visible' : 'hidden'">
+        <ng-container *ngFor="let subItem of navigationItem.items">
+            <app-menu-item [navigationItem]="subItem"></app-menu-item>
+        </ng-container>
+    </ul>
+</ng-template>
+
+<ng-template #item>
+    <a class="navigation nav-item block flex" [routerLink]="navigationItem.routerLink" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        <i class="{{ navigationItem.icon }} pr-2"></i><span>{{ navigationItem.label }}</span>
+    </a>
+</ng-template>
+

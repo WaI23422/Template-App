@@ -1,0 +1,8 @@
+.body-container{
+    background-color: #f1f5f9;
+    margin: 0rem;
+}
+
+.home-content{
+    transition: margin-left 0.4s ease-in-out
+}

@@ -1,0 +1,63 @@
+/* You can add global styles to this file, and also import other style files */
+@import "primeng/resources/themes/bootstrap4-light-blue/theme.css";
+@import "primeng/resources/primeng.min.css";
+@import "primeicons/primeicons.css";
+@import "primeflex/primeflex.min.css";
+@font-face {
+	font-family: "Lato";
+	src: url(assets/upload/font/lato/Lato-Regular.ttf) format("truetype"),
+    url(assets/upload/font/lato/Lato-Bold.ttf) format("truetype");
+}
+:root{
+	--sidebar-width: 16rem
+}
+* {
+	font-family: "Lato", sans-serif;
+	font-size: 1rem;
+}
+a {
+	color: black;
+	text-decoration: none;
+}
+body {
+	margin: 0;
+}
+ul {
+	list-style-type: none;
+	padding-left: 1rem
+}
+.container {
+	background-color: rgb(255, 255, 255);
+	border-radius: 0.5rem;
+	padding: 1rem;
+}
+.h-fixed {
+	height: calc(100vh - 5rem);
+}
+.m-page-fixed {
+	margin-left: calc(var(--sidebar-width) + 2rem) !important;
+}
+.p-sidebar .p-sidebar-header {
+	display: none;
+}
+.p-sidebar-content {
+	padding-top: 1.25rem !important
+}
+.w-sidebar-fixed {
+	width: calc(var(--sidebar-width));
+}
+.w-0 {
+	width: 0%;
+}
+.w-25 {
+	width: 25%;
+}
+.w-50 {
+	width: 50%;
+}
+.w-75 {
+	width: 75%;
+}
+.w-100 {
+	width: 100%;
+}

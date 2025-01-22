@@ -1,0 +1,19 @@
+<div class="header-container flex p-0 sticky top-0 shadow-1">
+    <div class="col-12 pt-2 pb-2 pl-4 pr-4 flex align-items-center">
+        <i class="circle-he pi pi-bars" (click)="changeSideBarVisibility()"></i>
+        <a class="logo mr-auto flex align-items-center" routerLink="">
+            <img class="" [src]="logoImageUrl" [width]="40">
+            <span class = "logo-title uppercase">
+                {{ logoTitle }}
+            </span>
+        </a>
+
+        <div class="right-icons">
+            <span class="icon-container ml-1 mr-1"><i class = "icon circle-he pi pi-sun"></i></span>
+            <span class="icon-container ml-1 mr-1"><i class = "icon circle-he pi pi-palette"></i></span>
+            <span class="icon-container ml-1 mr-1"><i class = "icon circle-he pi pi-calendar"></i></span>
+            <span class="icon-container ml-1 mr-1"><i class = "icon circle-he pi pi-inbox"></i></span>
+            <span class="icon-container ml-1 mr-1"><i class = "icon circle-he pi pi-user"></i></span>
+        </div> 
+    </div>
+</div>
