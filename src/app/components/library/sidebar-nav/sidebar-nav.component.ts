@@ -52,7 +52,6 @@ export class SidebarNavComponent implements OnInit {
   constructor(private screenService: ScreenService) {}
 
   ngOnInit(): void {
-    // this.checkScreenSize();
     this.checkScreenSize();
 
     this.screenService.onScreenWidthChange().subscribe(() => {

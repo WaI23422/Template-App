@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { SidebarNavComponent } from '../sidebar-nav/sidebar-nav.component';
 import { ScreenService } from 'src/app/services/screen.service';
 
@@ -15,16 +15,14 @@ export class LayoutComponent implements OnInit {
   title: string = 'Sakai-C';
   logoUrl: string = 'assets/upload/img/sakai-icon.svg';
 
-  constructor(private screenService: ScreenService) {
+  constructor(private screenService: ScreenService) {}
+
+  ngOnInit(): void {
     this.checkScreenSize();
 
     this.screenService.onScreenWidthChange().subscribe(() => {
       this.checkScreenSize();
     });
-  }
-
-  ngOnInit(): void {
-    this.checkScreenSize();
   }
 
   // @HostListener('window:resize', ['$event'])

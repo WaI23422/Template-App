@@ -1,0 +1,77 @@
+h1 {
+    margin-bottom: 40px;
+}
+
+a {
+    color: #333;
+    font-size: 13px;
+    text-decoration: none;
+    margin: 15px 0 10px;
+}
+
+button {
+    background-color: #512da8;
+    color: #fff;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.form {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    height: 100%;
+}
+
+.ng-touched.ng-dirty::placeholder {
+    color: red;
+}
+
+small {
+    margin-top: 1px;
+    margin-bottom: 5px;
+    display: block;
+    font-size: 11px;
+    color: red;
+}
+
+.p-inputgroup.ng-dirty {
+    padding-bottom: 0px;
+}
+
+.ng-trigger{
+    position: absolute;
+    /* Positions the modal below the input */
+    left: 0;
+    z-index: 10;
+    /* Ensures it pops above other elements */
+    background-color: #fff;
+    border: 1px solid #e74c3c;
+    border-radius: 6px;
+    padding: 12px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

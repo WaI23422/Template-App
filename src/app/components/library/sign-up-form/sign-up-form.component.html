@@ -1,0 +1,31 @@
+<div class="form" [formGroup]="signUpForm" (keydown.enter)="register()">
+    <h1>Tạo tài khoản</h1>
+    <div class="p-inputgroup col-10" [class.ng-dirty]="formHelper.isDisplay('username')">
+        <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+        <input class="username" type="text" name="username" formControlName="username" autocomplete="true"
+            [class.ng-dirty]="formHelper.isDisplay('username')" placeholder="Tài Khoản" pInputText>
+    </div>
+    <div class = "p-error-group" *ngIf="formHelper.isDisplay('username')">
+        <small *ngFor="let err of formHelper.errorDisplay('username')">{{err}}</small>
+    </div>
+
+    <div class="p-inputgroup col-10" [class.ng-dirty]="formHelper.isDisplay('password')">
+        <span class="p-inputgroup-addon"><i class="pi pi-lock"></i></span>
+        <input class="password" type="text" name="password" formControlName="password" placeholder="Mật Khẩu"
+            autocomplete="true" [class.ng-dirty]="formHelper.isDisplay('password')" [feedback]="false" pPassword>
+    </div>
+    <div class = "p-error-group" *ngIf="formHelper.isDisplay('password')">
+        <small *ngFor="let err of formHelper.errorDisplay('password')">{{err}}</small>
+    </div>
+
+    <div class="p-inputgroup col-10" [class.ng-dirty]="formHelper.isDisplay('email')">
+        <span class="p-inputgroup-addon"><i class="pi pi-envelope"></i></span>
+        <input class="email" type="text" name="email" formControlName="email" placeholder="Email" autocomplete="true"
+            [class.ng-dirty]="formHelper.isDisplay('email')" pInputText>
+    </div>
+    <div class = "p-error-group" *ngIf="formHelper.isDisplay('email')">
+        <small *ngFor="let err of formHelper.errorDisplay('email')">{{err}}</small>
+    </div>
+
+    <button type="button" (click)="register()">Đăng Ký</button>
+</div>

@@ -1,1 +1,27 @@
-<p>login works!</p>
+<div class="container" id="container" [class.active] = "isVisible">
+
+    <div class="form-container sign-in">
+        <div #signinForm></div>
+    </div>
+    <div class="form-container sign-up">
+        <div #signupForm></div>
+    </div>
+
+    <div class="toggle-container">
+        <div class="toggle">
+            <div class="toggle-panel toggle-left">
+                <h1>Bạn đã có tài khoản ?</h1>
+                <p>Ấn vào đây để đi đến đăng nhập</p>
+                <button id="login" (click)="handleSwitch()">Đăng Nhập</button>
+            </div>
+            <div class="toggle-panel toggle-right">
+                <h1>Xin chào, Bạn!</h1>
+                <p>Bạn có tài khoản chưa ? Nếu chưa bạn có muốn đăng ký tài khoản để sử dụng các tính năng của website
+                </p>
+                <button id="register" (click)="handleSwitch()">Đăng Ký</button>
+            </div>
+        </div>
+    </div>
+
+    
+</div>

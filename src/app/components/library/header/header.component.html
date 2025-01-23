@@ -3,17 +3,33 @@
         <i class="circle-he pi pi-bars" (click)="changeSideBarVisibility()"></i>
         <a class="logo mr-auto flex align-items-center" routerLink="">
             <img class="" [src]="logoImageUrl" [width]="40">
-            <span class = "logo-title uppercase">
+            <span class="logo-title uppercase">
                 {{ logoTitle }}
             </span>
         </a>
 
         <div class="right-icons">
-            <span class="icon-container ml-1 mr-1"><i class = "icon circle-he pi pi-sun"></i></span>
-            <span class="icon-container ml-1 mr-1"><i class = "icon circle-he pi pi-palette"></i></span>
-            <span class="icon-container ml-1 mr-1"><i class = "icon circle-he pi pi-calendar"></i></span>
-            <span class="icon-container ml-1 mr-1"><i class = "icon circle-he pi pi-inbox"></i></span>
-            <span class="icon-container ml-1 mr-1"><i class = "icon circle-he pi pi-user"></i></span>
-        </div> 
+            <span class="icon-container ml-1 mr-1"><i class="icon circle-he pi pi-sun"></i></span>
+            <span class="icon-container ml-1 mr-1"><i class="icon circle-he pi pi-palette"></i></span>
+            <ng-container [ngTemplateOutlet]="isMobileScreen ? mobile : desktop"></ng-container>
+        </div>
     </div>
 </div>
+
+
+<ng-template #mobile>
+    <p-overlayPanel #op>
+        <div class="icon-container flex border-round-he ml-1 mr-1 mobile-icon"><i class="icon pi pi-calendar pr-2"></i> Calender </div>
+        <div class="icon-container flex border-round-he ml-1 mr-1 mobile-icon"><i class="icon pi pi-inbox pr-2"></i> Message </div>
+        <div class="icon-container flex border-round-he ml-1 mr-1 mobile-icon"><i class="icon pi pi-user pr-2"></i> Profile </div>
+    </p-overlayPanel>
+
+    <span class="icon-container ml-1 mr-1" (click)="op.toggle($event)"><i
+            class="icon circle-he pi pi-ellipsis-v"></i></span>
+</ng-template>
+
+<ng-template #desktop>
+    <span class="icon-container ml-1 mr-1"><i class="icon circle-he pi pi-calendar"></i></span>
+    <span class="icon-container ml-1 mr-1"><i class="icon circle-he pi pi-inbox"></i></span>
+    <span class="icon-container ml-1 mr-1"><i class="icon circle-he pi pi-user"></i></span>
+</ng-template>

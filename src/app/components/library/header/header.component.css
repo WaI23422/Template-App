@@ -1,3 +1,13 @@
+.border-round-he {
+	border-radius: 10%;
+	display: inline-block;
+	padding: 10px;
+	transition: background-color 0.3s ease;
+}
+.border-round-he:hover {
+	background-color: #f1f2f3;
+	cursor: pointer;
+}
 .circle-he {
 	border-radius: 50%;
 	display: inline-block;
@@ -6,6 +16,10 @@
 }
 .circle-he:hover {
 	background-color: #f1f2f3;
+	cursor: pointer;
+}
+.header-container {
+	background-color: white;
 }
 .logo-title {
 	font-size: 1.3rem;
@@ -13,6 +27,10 @@
 .pi {
 	font-size: 1.1rem;
 }
-.header-container {
-	background-color: white;
+.mobile-icon {
+	padding-right: 4rem;
+	font-size: 14px;
+	.pi {
+		font-size: 14px;
+	}
 }

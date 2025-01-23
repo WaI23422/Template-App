@@ -37,6 +37,9 @@ ul {
 .m-page-fixed {
 	margin-left: calc(var(--sidebar-width) + 2rem) !important;
 }
+.p-overlaypanel .p-overlaypanel-content {
+    padding: 0.7rem;
+}
 .p-sidebar .p-sidebar-header {
 	display: none;
 }

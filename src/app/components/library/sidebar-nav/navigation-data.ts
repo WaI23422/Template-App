@@ -95,44 +95,44 @@ export const navData: MenuItem[] = [
     label: 'Pages',
     items: [
       {
-        routerLink: 'pages/landing',
+        routerLink: 'landing',
         icon: 'pi pi-globe',
         label: 'Landing',
       },
       {
-        routerLink: 'pages/auth',
+        routerLink: 'auth',
         icon: 'pi pi-user',
         label: 'Auth',
         items: [
           {
-            routerLink: 'pages/auth/login',
+            routerLink: 'auth/login',
             icon: 'pi pi-sign-in',
             label: 'Login',
           },
           {
-            routerLink: 'pages/auth/error',
+            routerLink: 'auth/error',
             icon: 'pi pi-times-circle',
             label: 'Error',
           },
           {
-            routerLink: 'pages/auth/access-denied',
+            routerLink: 'auth/access-denied',
             icon: 'pi pi-lock',
             label: 'Access Denied',
           }
         ]
       },
       {
-        routerLink: 'pages/crud',
+        routerLink: 'crud',
         icon: 'pi pi-pencil',
         label: 'Crud',
       },
       {
-        routerLink: 'pages/notfound',
+        routerLink: 'notfound',
         icon: 'pi pi-exclamation-circle',
         label: 'Not Found',
       },
       {
-        routerLink: 'pages/empty',
+        routerLink: 'empty',
         icon: 'pi pi-circle',
         label: 'Empty',
       },

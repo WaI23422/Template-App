@@ -1,0 +1,19 @@
+<div class="form justify-content-center align-items-center flex flex-column" [formGroup]="signInForm" (keydown.enter)="logInOnSubmit()">
+    <h1>Đăng Nhập</h1>
+    <div class="p-inputgroup col-10" [class.ng-dirty]="formHelper.isDisplay('username')">
+        <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+        <input class="username" type="text" name="username" formControlName="username"
+            autocomplete="true" [class.ng-dirty]="formHelper.isDisplay('username')" placeholder="Tài Khoản" pInputText>
+    </div>
+    <div class = "p-error-group" *ngIf="formHelper.isDisplay('username')">
+        <small *ngFor="let err of formHelper.errorDisplay('username')">{{err}}</small>
+    </div>
+
+    <p-password [toggleMask]="true" [placeholder]="'Mật Khẩu'" formControlName="password"></p-password>
+
+    <a routerLink="unknown">→ Quên mật khẩu ←</a>
+
+    <button type="button" (click)="logInOnSubmit()" >Đăng Nhập</button>
+</div>
+
+
