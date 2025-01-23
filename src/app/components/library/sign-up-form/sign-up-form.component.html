@@ -1,9 +1,9 @@
 <div class="form" [formGroup]="signUpForm" (keydown.enter)="register()">
-    <h1>Tạo tài khoản</h1>
+    <h1>Registering Hub</h1>
     <div class="p-inputgroup col-10" [class.ng-dirty]="formHelper.isDisplay('username')">
         <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
         <input class="username" type="text" name="username" formControlName="username" autocomplete="true"
-            [class.ng-dirty]="formHelper.isDisplay('username')" placeholder="Tài Khoản" pInputText>
+            [class.ng-dirty]="formHelper.isDisplay('username')" placeholder="Account" pInputText>
     </div>
     <div class = "p-error-group" *ngIf="formHelper.isDisplay('username')">
         <small *ngFor="let err of formHelper.errorDisplay('username')">{{err}}</small>
@@ -11,7 +11,7 @@
 
     <div class="p-inputgroup col-10" [class.ng-dirty]="formHelper.isDisplay('password')">
         <span class="p-inputgroup-addon"><i class="pi pi-lock"></i></span>
-        <input class="password" type="text" name="password" formControlName="password" placeholder="Mật Khẩu"
+        <input class="password" type="text" name="password" formControlName="password" placeholder="Password"
             autocomplete="true" [class.ng-dirty]="formHelper.isDisplay('password')" [feedback]="false" pPassword>
     </div>
     <div class = "p-error-group" *ngIf="formHelper.isDisplay('password')">
@@ -27,5 +27,5 @@
         <small *ngFor="let err of formHelper.errorDisplay('email')">{{err}}</small>
     </div>
 
-    <button type="button" (click)="register()">Đăng Ký</button>
+    <button type="button" (click)="register()">Sign Up</button>
 </div>

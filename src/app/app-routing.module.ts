@@ -4,8 +4,8 @@ import { NotfoundComponent } from './pages/errors/notfound/notfound.component';
 import { LayoutComponent } from './components/library/layout/layout.component';
 import { DashboardComponent } from './pages/home/dashboard/dashboard.component';
 import { EmptyComponent } from './pages/empty/empty.component';
-import { LandingComponent } from './pages/landing/landing.component';
 import { AuthGuard } from './services/auth.guard';
+import { LandingComponent } from './pages/landing/landing.component';
 
 const routes: Routes = [
   { path: 'notfound', component: NotfoundComponent },
@@ -20,7 +20,7 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   { path: 'auth', loadChildren: () => import("./pages/auth/auth.module").then(m => m.AuthModule)},
-  { path: 'landing', pathMatch: "full", component: LandingComponent},
+  { path: 'landing', pathMatch:"full", component: LandingComponent},
   { path: 'notfound', pathMatch: "full", component: NotfoundComponent},
   { path: '**', pathMatch: 'full', redirectTo: '/notfound' },
 ];

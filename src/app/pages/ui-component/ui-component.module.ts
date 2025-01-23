@@ -18,6 +18,10 @@ import { ChartComponent } from './chart/chart.component';
 import { TimelineComponent } from './timeline/timeline.component';
 import { MiscComponent } from './misc/misc.component';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+import {ButtonModule} from 'primeng/button';
+import {InputTextModule} from 'primeng/inputtext';
 
 @NgModule({
   declarations: [
@@ -39,7 +43,11 @@ import { MiscComponent } from './misc/misc.component';
   ],
   imports: [
     CommonModule,
-    UiComponentRoutingModule
+    UiComponentRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    ButtonModule,
+    InputTextModule
   ]
 })
 export class UiComponentModule { }

@@ -21,6 +21,9 @@
 .header-container {
 	background-color: white;
 }
+.logo-image {
+	filter: invert(34%) sepia(76%) saturate(568%) hue-rotate(112deg) brightness(140%) contrast(101%);
+}
 .logo-title {
 	font-size: 1.3rem;
 }

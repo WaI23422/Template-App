@@ -2,7 +2,7 @@ import { Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { FormHelperService } from 'src/app/services/form-helper.service';
-import { signInObject } from 'src/app/app-interface-object';
+import { formBasicObject } from 'src/app/app-interface-object';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -45,20 +45,20 @@ export class SignInFormComponent implements OnInit {
     }
 
     if (localUsers === null) {
-      alert("Không tồn tại tên đăng nhập");
+      alert("Username does not exist.");
       return;
     };
 
     const users = JSON.parse(localUsers);
     const isExist = users.find(
-      (user: signInObject) => user.name == userForm.name && user.password == userForm.password
+      (user: formBasicObject) => user.name == userForm.name && user.password == userForm.password
     );
     if (isExist === undefined) {
-      alert("Sai tên đăng nhập hoặc mật khẩu");
+      alert("Incorrect username or password");
       return;
     }
 
-    alert("Đăng nhập thành công!!!");
+    alert("Succesful Login!!!");
     this.authService.login();
     this.router.navigateByUrl('');
     return;

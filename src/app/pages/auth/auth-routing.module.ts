@@ -8,6 +8,7 @@ const routes: Routes = [
   { path: 'login', pathMatch: "full", component: LoginComponent},
   { path: 'error', pathMatch: "full", component: ErrorsComponent},
   { path: 'access-denied', pathMatch: "full", component:AccessDeniedComponent},
+  { path: '**', pathMatch: 'full', redirectTo: "/notfound"}
 ];
 
 @NgModule({

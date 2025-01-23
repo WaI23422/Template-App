@@ -12,7 +12,7 @@ export class LayoutComponent implements OnInit {
 
   isMobileScreen!: boolean;
   sidebarVisible: boolean = false;
-  title: string = 'Sakai-C';
+  title: string = 'Sakai-PT';
   logoUrl: string = 'assets/upload/img/sakai-icon.svg';
 
   constructor(private screenService: ScreenService) {}

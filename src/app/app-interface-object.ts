@@ -1,26 +1,10 @@
 export interface AppInterface {
 }
 
-export class signInObject {
-    email: string;
-    name: string;
-    password: string;
+export class formBasicObject {
+    name !: string;
+    email !: string;
+    password !: string;
 
-    constructor() {
-        this.email = '';
-        this.name = '';
-        this.password = '';
-    }
-}
-
-export class signUpObject {
-    email: string;
-    name: string;
-    password: string;
-
-    constructor() {
-        this.email = '';
-        this.name = '';
-        this.password = '';
-    }
+    constructor() {}
 }

@@ -10,7 +10,7 @@ a {
 }
 
 button {
-    background-color: #512da8;
+    background-color: #10B981;
     color: #fff;
     font-size: 12px;
     padding: 10px 45px;
@@ -62,6 +62,13 @@ small {
     margin-top: 5px;
     box-sizing: border-box;
     animation: fadeIn 0.3s ease-in-out;
+}
+
+.p-inputgroup-addon {
+    background-color: #10B981;
+    i {
+        color: #fff;
+    }
 }
 
 @keyframes fadeIn {

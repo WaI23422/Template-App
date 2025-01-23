@@ -1,0 +1,41 @@
+<div class="header-container flex sticky top-0 py-4 px-4 mx-0 md:mx-4 lg:mx-8 lg:px-8">
+    <div class="col-12 flex align-items-center">
+        <a class="logo flex mr-auto lg:mr-8 align-items-center" routerLink="/">
+            <img class="logo-image mr-2" [src]="logoImageUrl" [width]="42">
+            <span class="logo-title uppercase">
+                {{ logoTitle }}
+            </span>
+        </a>
+
+        <ng-container *ngIf="!isMobileScreen then navigation"></ng-container>
+        
+
+        <div class="right-parts">
+            <ng-container [ngTemplateOutlet]="isMobileScreen ? mobile : desktop"></ng-container>
+        </div>
+    </div>
+</div>
+
+
+<ng-template #mobile>
+    <p-overlayPanel #op>
+
+    </p-overlayPanel>
+
+    <span class="icon-container mr-1" (click)="op.toggle($event)"><i class="icon circle-he pi pi-bars"></i></span>
+</ng-template>
+
+<ng-template #desktop>
+    <div pButton routerLink="/auth/login">Explore</div>
+</ng-template>
+
+<ng-template #navigation>
+    <nav class="mr-auto">
+        <ul class="flex p-0 gap-4">
+            <li>Home</li>
+            <li>Feature</li>
+            <li>Highlight</li>
+            <li>Pricing</li>
+        </ul>
+    </nav>
+</ng-template>

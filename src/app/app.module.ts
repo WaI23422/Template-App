@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 
 import { NotfoundComponent } from './pages/errors/notfound/notfound.component';
 import { LayoutModule } from './components/library/layout/layout.module';
-import { LandingComponent } from './pages/landing/landing.component';
 import { CrudComponent } from './pages/crud/crud.component';
 import { EmptyComponent } from './pages/empty/empty.component';
 import { SignInFormComponent } from './components/library/sign-in-form/sign-in-form.component';
@@ -16,12 +15,12 @@ import { SignUpFormComponent } from './components/library/sign-up-form/sign-up-f
 
 import { PasswordModule } from 'primeng/password';
 import {InputTextModule} from 'primeng/inputtext';
+import { LandingModule } from './pages/landing/landing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     NotfoundComponent,
-    LandingComponent,
     CrudComponent,
     EmptyComponent,
     SignInFormComponent,
@@ -30,6 +29,7 @@ import {InputTextModule} from 'primeng/inputtext';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    LandingModule,
     LayoutModule,
     BrowserAnimationsModule,
     FormsModule,

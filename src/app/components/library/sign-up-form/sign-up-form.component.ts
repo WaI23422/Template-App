@@ -38,7 +38,6 @@ export class SignUpFormComponent implements OnInit {
         email:this.signUpForm.value.email,
         password: this.signUpForm.value.password
       }]));
-    this.router.navigateByUrl("login");
     alert("Đăng ký thành công");
   }
 }

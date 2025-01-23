@@ -1,1 +1,45 @@
-<p>form-layout works!</p>
+<div class="form-layout-container flex flex-column md:flex-row gap-4">
+    <div class="lg:w-6">
+        <div class="template-driven-form-v container-fluid p-4 border-round-lg ">
+            <h1 class="title text-center"> Template Driven Form (Vertical) </h1>
+    
+            <div class="form-content w-full">
+                <form class="flex flex-column align-items-center justify-content-center" #templateFormVertical="ngForm" (ngSubmit)="onSubmit(templateFormVertical)">
+                    <div class="grid row-gap-3 m-3 w-full">
+                        <div class ="flex flex-column gap-2 w-full">
+                            <label class="p-0" for="username">Username</label>
+                            <input pInputText class="col-12" type="text" id="username" name="username" [(ngModel)]="templateDrivenVertical.name" required />
+                        </div>
+                    
+                        <div class="flex flex-column gap-2 w-full">
+                            <label class="p-0" for="email">Email</label>       
+                            <input pInputText class="col-12" type="email" id="email" name="email" [(ngModel)]="templateDrivenVertical.email" required email />
+                        </div>
+                    </div>
+    
+                    <button pButton type="submit" [disabled]="templateFormVertical.invalid">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <div class="lg:w-6">
+        <div class="template-driven-form-h container-fluid p-4 border-round-lg ">
+            <h1 class="title text-center"> Template Driven Form (Horizontal) </h1>
+    
+            <div class="form-content w-full">
+                <form class="flex flex-column align-items-center justify-content-center" #templateFormHorizontal="ngForm" (ngSubmit)="onSubmit(templateFormHorizontal)">
+                    <div class="grid row-gap-3 m-3 w-full">
+                        <label class="col-4" for="username">Username</label>
+                        <input pInputText class="col-8" type="text" id="username" name="username" [(ngModel)]="templateDrivenHorizontal.name" required />
+                    
+                        <label class="col-4" for="email">Email</label>       
+                        <input pInputText class="col-8" type="email" id="email" name="email" [(ngModel)]="templateDrivenHorizontal.email" required email />
+                    </div>
+    
+                    <button pButton type="submit" [disabled]="templateFormHorizontal.invalid">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
