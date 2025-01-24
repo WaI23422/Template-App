@@ -14,7 +14,7 @@ import { SignInFormComponent } from './components/library/sign-in-form/sign-in-f
 import { SignUpFormComponent } from './components/library/sign-up-form/sign-up-form.component';
 
 import { PasswordModule } from 'primeng/password';
-import {InputTextModule} from 'primeng/inputtext';
+import { InputTextModule } from 'primeng/inputtext';
 import { LandingModule } from './pages/landing/landing.module';
 
 @NgModule({

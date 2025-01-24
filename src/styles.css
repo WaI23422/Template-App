@@ -56,7 +56,7 @@ ul {
   margin-left: calc(var(--sidebar-width) + 2rem) !important;
 }
 .p-overlaypanel .p-overlaypanel-content {
-  padding: 0.7rem;
+  padding: 1.5rem;
 }
 .p-sidebar .p-sidebar-header {
   display: none;
