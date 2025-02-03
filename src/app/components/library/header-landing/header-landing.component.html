@@ -1,4 +1,4 @@
-<div class="header-container flex sticky top-0 mx-0">
+<div class="header-container flex mx-0 w-full"> <!-- sticky top-0 -->
     <div class="col-12 flex align-items-center">
         <a class="logo flex mr-auto lg:mr-6 align-items-center" routerLink="/">
             <img class="logo-image mr-2" [src]="logoImageUrl" [width]="42">
@@ -10,26 +10,25 @@
         <ng-container *ngIf="!isMobileScreen then navigation"></ng-container>
 
 
-        <div class="right-parts flex">
+        <div class="right-parts flex z-900">
             <ng-container [ngTemplateOutlet]="isMobileScreen ? mobile : desktop"></ng-container>
         </div>
     </div>
 </div>
 
-
 <ng-template #mobile>
-    <p-overlayPanel #op [appendTo]="null">
-        <nav>
+    <p-overlayPanel #op appendTo="body" [style]="{width: '90%', 'padding': '0rem 2.5rem 0rem 2.5rem'}">
+        <nav class="mobile-nav">
             <ul class="flex flex-column p-0 gap-5">
-                <li>Home</li>
-                <li>Feature</li>
-                <li>Highlight</li>
-                <li>Pricing</li>
+                <li><a class="text-lg" [routerLink]="['/landing']">Home</a></li>
+                <li><a class="text-lg" [routerLink]="['/landing']" fragment="features">Feature</a></li>
+                <li><a class="text-lg" [routerLink]="['/landing']" fragment="highlights">Highlight</a></li>
+                <li><a class="text-lg" [routerLink]="['/landing']" fragment="pricing">Pricing</a></li>
             </ul>
         </nav>
         <hr class="my-4">
         <div class="flex justify-content-center">
-            <div pButton routerLink="/auth/login">Explore</div>
+            <div class="text-lg" pButton routerLink="/auth/login">Explore</div>
         </div>
     </p-overlayPanel>
 
@@ -43,10 +42,10 @@
 <ng-template #navigation>
     <nav class="mr-auto">
         <ul class="flex p-0 gap-4">
-            <li>Home</li>
-            <li>Feature</li>
-            <li>Highlight</li>
-            <li>Pricing</li>
+            <li><a [routerLink]="['/landing']" >Home</a></li>
+            <li><a [routerLink]="['/landing']" fragment="features">Feature</a></li>
+            <li><a [routerLink]="['/landing']" fragment="highlights">Highlight</a></li>
+            <li><a [routerLink]="['/landing']" fragment="pricing">Pricing</a></li>
         </ul>
     </nav>
 </ng-template>

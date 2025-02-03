@@ -1,12 +1,18 @@
 .home-section {
   height: 700px;
   background: linear-gradient(90deg, #d4f1ff,#d4e6ec, #ffffd0, #e0fbe1);
-  border-radius: 0 25% 0 25%;
+  clip-path: ellipse(150% 87% at 93% 13%);
 }
 
-.p-button {
-  background-color: #10b981;
-  border-color: #10b981;
-  padding: 0.5rem 1rem;
+button {
+  background-color: #7de7c4;
+  border: 1px solid #7de7c4;
   border-radius: 100px;
+}
+
+button:hover {
+  background-color: #19d291;
+  border-color: #19d291;
+  color: white;
+  cursor: pointer;
 }

@@ -1,11 +1,6 @@
 * {
   font-size: 1.3rem;
 }
-.header-container {
-  background-color: rgba(255, 255, 255, 0.4); 
-  backdrop-filter: blur(10px);
-  padding: 0 8.75rem;
-}
 .circle-he {
   border-radius: 50%;
   display: inline-block;
@@ -16,6 +11,11 @@
   background-color: #f1f2f3;
   cursor: pointer;
 }
+.header-container {
+  background-color: rgba(255, 255, 255, 0.4); 
+  backdrop-filter: blur(10px);
+  padding: 0 8.75rem;
+}
 .logo-image {
   filter: invert(34%) sepia(76%) saturate(568%) hue-rotate(112deg)
     brightness(140%) contrast(101%);
@@ -25,10 +25,6 @@
   border-color: #10b981;
   padding: 0.5rem 1rem;
   border-radius: 100px;
-}
-
-:host ::ng-deep .p-overlaypanel .p-overlaypanel-content {
-  width: 82vw;
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
