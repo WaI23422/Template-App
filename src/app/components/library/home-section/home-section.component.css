@@ -16,3 +16,9 @@ button:hover {
   color: white;
   cursor: pointer;
 }
+
+@media (max-width: 767px) {
+  img.home-section-img {
+    width: 90%
+  }
+}
