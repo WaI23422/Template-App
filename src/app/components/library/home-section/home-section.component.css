@@ -17,8 +17,10 @@ button:hover {
   cursor: pointer;
 }
 
+.w-9\/12 {
+  width: 75%;
+  height: auto;
+}
+
 @media (max-width: 767px) {
-  img.home-section-img {
-    width: 90%
-  }
 }

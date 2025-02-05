@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FeaturesSectionComponent, HeaderLandingComponent, HomeSectionComponent } from 'src/app/components/library';
+import { FeaturesSectionComponent, HeaderLandingComponent, HighlightsSectionComponent, HomeSectionComponent, PricingSectionComponent } from 'src/app/components/library';
 import { LandingComponent } from './landing.component';
 import { OverlayPanelModule } from 'primeng/overlaypanel';
 import { RouterModule } from '@angular/router';
@@ -11,7 +11,9 @@ import { ButtonModule } from 'primeng/button';
     LandingComponent,
     HeaderLandingComponent,
     HomeSectionComponent,
-    FeaturesSectionComponent
+    FeaturesSectionComponent,
+    HighlightsSectionComponent,
+    PricingSectionComponent
   ],
   imports: [
     CommonModule,

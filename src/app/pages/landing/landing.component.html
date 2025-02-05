@@ -1,7 +1,8 @@
-<app-header-landing
-    [logoImageUrl] = "logoUrl"
-    [logoTitle] = "title"
-></app-header-landing>
+<div class="home-landing-wrapper">
+    <app-header-landing [logoImageUrl]="logoUrl" [logoTitle]="title"></app-header-landing>
 
-<app-home-section id="home"></app-home-section>
-<app-features-section id="features"></app-features-section>
+    <app-home-section id="home"></app-home-section>
+    <app-features-section id="features"></app-features-section>
+    <app-highlights-section id="highlights"></app-highlights-section>
+    <app-pricing-section id="pricing"></app-pricing-section>
+</div>
