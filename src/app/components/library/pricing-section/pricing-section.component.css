@@ -1,0 +1,28 @@
+hr {
+  height: 1px;
+  width: 96%;
+  background-color: #cbd5e1;
+  border: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.box-content {
+  border: 2px solid #cbd5e1;
+  border-radius: 10px;
+}
+
+button {
+  background-color: #7de7c4;
+  border: 1px solid #7de7c4;
+  border-radius: 100px;
+}
+
+button:hover {
+  background-color: #19d291;
+  border-color: #19d291;
+  color: white;
+  cursor: pointer;
+}

@@ -9,5 +9,6 @@ export * from "./home-section/home-section.component"
 export * from "./features-section/features-section.component";
 export * from "./highlights-section/highlights-section.component";
 export * from "./pricing-section/pricing-section.component";
+export * from "./footer-landing/footer-landing.component";
 
 export * from "./share.module";

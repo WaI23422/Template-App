@@ -9,15 +9,13 @@ import { Component, Input, OnInit } from '@angular/core';
     trigger('submenuAnimation', [
       state('hidden', style({
         height: '0px',
-        opacity: 0,
         overflow: 'hidden',
       })),
       state('visible', style({
         height: '*',
-        opacity: 1,
       })),
       transition('hidden <=> visible', [
-        animate('0.1s 0.1s ease')
+        animate('0.2s 0.2s ease')
       ]),
     ])
   ]
