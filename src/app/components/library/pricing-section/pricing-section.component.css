@@ -12,6 +12,11 @@ li {
 .box-content {
   border: 2px solid #cbd5e1;
   border-radius: 10px;
+  transition: border-color ease-in-out 0.2s;
+}
+
+.box-content:hover{
+  border-color: #17c588;
 }
 
 button {
