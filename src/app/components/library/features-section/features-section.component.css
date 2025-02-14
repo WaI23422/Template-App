@@ -22,9 +22,7 @@
     justify-self: center;
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), radial-gradient(77.36% 256.97% at 77.36% 57.52%, #efe1af 0%, #c3dcfa 100%);
     padding: 5rem;
-    margin: 0 5rem 0 5rem;
-    width: 95%;
-    max-width: 1480px;
+    max-width: 1900px;
     border-radius: 10px;
 }
 

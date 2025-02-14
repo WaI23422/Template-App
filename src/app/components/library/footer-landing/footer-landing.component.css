@@ -1,3 +1,7 @@
+.footer-landing{
+  background-color: rgb(244, 244, 244);
+}
+
 .logo-image {
   filter: invert(34%) sepia(76%) saturate(568%) hue-rotate(112deg)
     brightness(140%) contrast(101%);
